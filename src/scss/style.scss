@@ -1,1 +1,201 @@
-@import "preset";
+$prime: #ff6e48;
+$ciBlue: #00fff1;
+$ciRed: #ff00aa;
+$ciWhite: #ffffff;
+$ciGreen: #46fcb4;
+$second: #0c1016;
+
+$roboto: 'Roboto', sans-serif;
+
+@font-face {
+	font-family: $roboto;
+	src: url('./../assets/fonts/Roboto-Bold.ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: $roboto;
+	src: url('./../assets/fonts/Roboto-Regular.ttf');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: $roboto;
+	src: url('./../assets/fonts/Roboto-Light.ttf');
+	font-weight: 300;
+}
+
+body,
+html {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: $second;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+	color: $ciBlue;
+	font-family: $roboto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+// Tutorial Start
+
+$headerHeight: 10rem;
+$sidebarWidth: 35rem;
+$margin: 2rem;
+
+$screen-mid: 768px;
+$screen-normal: 992px;
+$screen-large: 1200px;
+
+@mixin small {
+	@media (max-width: #{$screen-mid}) {
+		@content;
+	}
+}
+
+@mixin mid {
+	@media (min-width: #{$screen-mid}) {
+		@content;
+	}
+}
+
+@mixin normal {
+	@media (min-width: #{$screen-normal}) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (min-width: #{$screen-large}) {
+		@content;
+	}
+}
+
+main {
+	width: 100%;
+	background-color: red;
+	min-height: 100vh;
+	font-size: 2rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding: $headerHeight 0 0 0;
+
+	.content {
+		display: flex;
+		justify-content: stretch;
+		align-items: stretch;
+		min-height: 100vh;
+		width: 100%;
+		max-width: 100rem;
+
+		@include small {
+			flex-direction: column;
+		}
+
+		@include mid {
+			flex-direction: column;
+		}
+
+		@include normal {
+			flex-direction: row;
+		}
+
+		@include large {
+			flex-direction: row;
+		}
+
+		.article-wrapper {
+			background-color: cyan;
+			width: 100%;
+			padding: $margin;
+			.article {
+				min-height: 50vh;
+				background-color: green;
+				margin: 0 0 $margin 0;
+			}
+
+			.author {
+				min-height: 10vh;
+				background-color: green;
+				margin: 0 0 $margin 0;
+			}
+
+			.comment {
+				min-height: 50vh;
+				background-color: green;
+			}
+		}
+
+		aside {
+			background-color: green;
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: column;
+			padding: $margin;
+
+			@include small {
+				width: 100%;
+			}
+
+			@include mid {
+				width: 100%;
+			}
+
+			@include normal {
+				width: $sidebarWidth;
+			}
+
+			@include large {
+				width: $sidebarWidth;
+			}
+
+			section {
+				min-height: 25rem;
+				width: 100%;
+				margin: 0 0 $margin 0;
+				background-color: yellow;
+				color: black;
+				&:last-child {
+					margin: 0 0 0 0;
+				}
+			}
+		}
+	}
+
+	header {
+		width: 100%;
+		height: $headerHeight;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: blue;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	footer {
+		min-height: 25rem;
+		width: 100%;
+		background-color: orange;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
