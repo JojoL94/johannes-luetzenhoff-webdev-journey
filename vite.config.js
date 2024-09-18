@@ -1,7 +1,7 @@
 import {defineConfig} from "vite";
 
 export default defineConfig({
-    base: 'basic-webdev-setup/',
+    base: 'johannes-luetzenhoff-webdev-journey/',
     root: "",
     assetsInclude: ["./assets/**/*.*"],
     /*build: {
