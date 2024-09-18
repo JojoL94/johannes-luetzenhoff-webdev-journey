@@ -4,8 +4,8 @@ export default defineConfig({
     base: 'basic-webdev-setup/',
     root: "",
     assetsInclude: ["./assets/**/*.*"],
-    build: {
+    /*build: {
         emptyOutDir: true,
-        outDir: "../dist"
-    }
+        outDir: "/dist"
+    }*/
 })
