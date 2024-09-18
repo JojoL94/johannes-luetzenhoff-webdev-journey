@@ -3,7 +3,7 @@
 $headerHeight: 10rem;
 main{
     width: 100%;
-    background-color: red;
+    background-color: black;
     min-height: 100vh;
     font-size: 2rem;
     display: flex;
@@ -12,6 +12,41 @@ main{
     justify-content: flex-start;
     padding: $headerHeight 0 0 0;
 }
+$size: 10rem;
+.magnetic-container{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    padding: $size * 0.8;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    .magnetic-element{
+        z-index: 2;
+        width: $size * 0.3;
+        height: $size * 0.3;
+        pointer-events: none;
+        img{
+            height: 100%;
+            vertical-align: bottom;
+            transform: rotate(-90deg)
+        }
+    }
+    .magnetic-background{
+        background-color: $ciGreen;
+        width: $size * 0.6;
+        height: $size * 0.6;
+        position: absolute;
+        z-index: 1;
+        border-radius: $size * 0.2;
+        pointer-events: none;
+        box-shadow: 0px $size * 0.3 $size 0 px rgba($ciGreen, $alpha: 0.85);
+
+    }
+}
+
 
 header{
     width: 100%;
@@ -55,3 +90,4 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
