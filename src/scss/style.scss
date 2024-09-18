@@ -3,7 +3,7 @@
 $headerHeight: 10rem;
 main{
     width: 100%;
-    background-color: black;
+    background-color: $joBlue;
     min-height: 100vh;
     font-size: 2rem;
     display: flex;
@@ -35,7 +35,7 @@ $size: 10rem;
         }
     }
     .magnetic-background{
-        background-color: $ciGreen;
+        background-color: $joYellow;
         width: $size * 0.6;
         height: $size * 0.6;
         position: absolute;
@@ -46,7 +46,6 @@ $size: 10rem;
 
     }
 }
-
 
 header{
     width: 100%;
