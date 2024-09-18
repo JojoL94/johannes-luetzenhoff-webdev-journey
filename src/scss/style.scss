@@ -1,1 +1,156 @@
 @import "preset";
+$headerHeight: 10rem;
+$sidebarWidth: 35rem;
+$margin: 2rem;
+
+$screen-mid: 768px;
+$screen-normal: 992px;
+$screen-large: 1200px;
+
+@mixin small {
+	@media (max-width: #{$screen-mid}) {
+		@content;
+	}
+}
+
+@mixin mid {
+	@media (min-width: #{$screen-mid}) {
+		@content;
+	}
+}
+
+@mixin normal {
+	@media (min-width: #{$screen-normal}) {
+		@content;
+	}
+}
+
+@mixin large {
+	@media (min-width: #{$screen-large}) {
+		@content;
+	}
+}
+
+main {
+	width: 100%;
+	background-color: red;
+	min-height: 100vh;
+	font-size: 2rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	@include small {
+		padding: $headerHeight 0 0 0;
+	}
+
+	@include mid {
+		padding: $headerHeight 0 0 0;
+	}
+
+	@include normal {
+		padding: $headerHeight 0 0 $sidebarWidth;
+	}
+
+	@include large {
+		padding: $headerHeight 0 0 $sidebarWidth;
+	}
+
+	aside {
+		background-color: yellow;
+		color: black;
+
+		@include small {
+			width: 100%;
+			min-height: 15rem;
+		}
+
+		@include mid {
+			width: 100%;
+			min-height: 15rem;
+		}
+
+		@include normal {
+			width: $sidebarWidth;
+			height: 100%;
+			position: fixed;
+			top: $headerHeight;
+			left: 0;
+			bottom: 0;
+		}
+
+		@include large {
+			width: $sidebarWidth;
+			height: 100%;
+			position: fixed;
+			top: $headerHeight;
+			left: 0;
+			bottom: 0;
+		}
+	}
+
+	.content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		min-height: 100vh;
+
+		.products {
+			padding: $margin;
+			width: 100%;
+			display: grid;
+			grid-gap: $margin;
+
+			@include small {
+				grid-template-columns: auto;
+			}
+
+			@include mid {
+				grid-template-columns: auto auto;
+			}
+
+			@include normal {
+				grid-template-columns: auto auto;
+			}
+
+			@include large {
+				grid-template-columns: auto auto auto;
+			}
+
+			.product {
+				background-color: green;
+				display: flex;
+				min-height: 25rem;
+			}
+		}
+	}
+
+	header {
+		width: 100%;
+		height: $headerHeight;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: blue;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	footer {
+		min-height: 25rem;
+		width: 100%;
+		background-color: orange;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
