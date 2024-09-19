@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,30 +7,39 @@
     <title>Single Page Layout</title>
   </head>
   <body>
-
     <main>
-      <header> Header</header>
+      <header>Header</header>
 
-      <!--<section>
-        <article>Section 1</article>-->
+      <section class="content">
+        <div class="block">
         <button class="magnetic-container">
           <div class="magnetic-element">
-            <img src="./assets/icons/magnet.svg" alt="">
+            <img src="./assets/icons/magnet.svg" alt="" />
           </div>
           <div class="magnetic-background"></div>
         </button>
-      <!--</section>-->
-
-      <section>
-        <article>Kurzprofil</article>
+      </div>
       </section>
 
-      <section>
-        <article>Lebenslauf</article>
+      <section class="content">
+        <div class="block">
+          <article>Kurzprofil</article>
+        </div>
+        <div class="block">
+          <img src="./assets/icons/magnet.svg" alt="" />
+        </div>
       </section>
 
-      <section>
-        <article>Abschluss</article>
+      <section class="content">
+        <div class="block">
+          <article>Lebenslauf</article>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="block">
+          <article>Abschluss</article>
+        </div>
       </section>
 
       <footer>Footer</footer>
