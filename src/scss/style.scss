@@ -1,6 +1,6 @@
 @import "preset";
 @import "magneticSmiley";
-
+@import 'typed';
 $headerHeight: 10rem;
 $sidebarWidth: 20rem;
 $margin: 2rem;
@@ -59,7 +59,50 @@ main {
   @include large {
     padding: $headerHeight 0 0 $sidebarWidth;
   }
-
+  .typewriter {
+    display: grid;
+    //height: 100vh;
+    place-items: center;
+    width: 100%;
+  }
+  
+  .input-wrapper {
+    display: block;
+    font-family: monospace;
+    font-size: 125%;
+    width: 50%;
+    > input,
+    > .placeholder {
+      display: block;
+      appearance: none;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+    }
+    > .placeholder {
+      pointer-events: none;
+      @include typed(
+        "Hi, Johannes hier",
+        "Die Seite wurde am 19.09.2024 erstellt",
+        "Der Rest wird in den nächsten Tagen fertig gemacht",
+        "PS: Der Smiley hier reagiert auf deinen Mauszeiger",
+        1.5,
+        (
+          caret-width: 2px,
+          caret-space: 2px
+        )
+      );
+    }
+    > input {
+      &:focus,
+      &:active {
+        + .placeholder {
+          display: none;
+        }
+      }
+    }
+  }
   aside {
     background-color: yellow;
     color: black;
