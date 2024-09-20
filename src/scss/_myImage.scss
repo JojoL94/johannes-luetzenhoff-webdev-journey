@@ -3,7 +3,7 @@ $imgSizeFactor: 0.9;
 $imgBackgroundSizeFactor: 0.95;
 .myImage-container{
     border: none;
-    background-color: red;
+    background-color: $joRed;
     position: relative;
     padding: $containerSize * 0.1;
     margin: 0;

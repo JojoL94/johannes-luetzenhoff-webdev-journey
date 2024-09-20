@@ -3,7 +3,7 @@ $size: 5rem;
     height: 100%;
     width: 100%;
     border: none;
-    background-color: red;
+    background-color: $joRed;
     position: relative;
     padding: $size * 0.2;
     margin: 0;
@@ -23,8 +23,8 @@ $size: 5rem;
     }
     .magnetic-background{
         background-color: $joYellow;
-        width: $size* 1.5;
-        height: $size * 1.5;
+        width: $size* 1.2;
+        height: $size * 1.2;
         position: absolute;
         z-index: 1;
         border-radius: $size * 0.2;
