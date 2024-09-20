@@ -1,6 +1,9 @@
 @import "preset";
 @import "magneticSmiley";
 @import 'typed';
+@import 'normalize';
+@import 'utilAnimation';
+@import 'myImage';
 $headerHeight: 10rem;
 $sidebarWidth: 20rem;
 $margin: 2rem;
@@ -8,6 +11,7 @@ $margin: 2rem;
 $screen-mid: 768px;
 $screen-normal: 992px;
 $screen-large: 1200px;
+
 
 @mixin small {
   @media (max-width: #{$screen-mid}) {
@@ -34,7 +38,7 @@ $screen-large: 1200px;
 }
 
 main {
-  width: 100%;
+  width: 99%;
   background-color: red;
   min-height: 100vh;
   font-size: 2rem;
@@ -144,9 +148,10 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    min-height: 20vh;
+    min-height: 25vh;
     padding: $margin;
     border: 2px solid $joOrange;
+
     .blocks {
       padding: $margin;
       width: 100%;
@@ -170,8 +175,18 @@ main {
       }
       .block {
         background-color: green;
-        display: flex;
-        min-height: 15rem;
+        padding: $margin;
+        width: 100%;
+        display: grid;
+        grid-gap: $margin;
+
+        .block-element{
+          background-color: rgb(128, 0, 109);
+          display: flex;
+          min-height: 2rem;
+          align-content: center;
+          justify-content: center;
+        }
       }
     }
   }
@@ -200,4 +215,5 @@ main {
     justify-content: center;
     align-items: center;
   }
+
 }

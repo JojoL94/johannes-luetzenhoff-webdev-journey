@@ -1,0 +1,35 @@
+$containerSize: 25rem;
+$imgSizeFactor: 0.9;
+$imgBackgroundSizeFactor: 0.95;
+.myImage-container{
+    border: none;
+    background-color: red;
+    position: relative;
+    padding: $containerSize * 0.1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    .myImage-element{
+        z-index: 2;
+        width: $containerSize * $imgSizeFactor;
+        height: $containerSize * $imgSizeFactor;
+        pointer-events: none;
+        img{
+            height: 100%;
+            vertical-align: bottom;
+        }
+    }
+    .myImage-background{
+        background-color: $joYellow;
+        width: $containerSize * $imgBackgroundSizeFactor;
+        height: $containerSize * $imgBackgroundSizeFactor;
+        position: absolute;
+        z-index: 1;
+        border-radius: $containerSize * 0.5;
+        pointer-events: none;
+        box-shadow: 0px $containerSize * 0.3 $containerSize 0 px rgba($ciGreen, $alpha: 0.85);
+
+    }
+}
