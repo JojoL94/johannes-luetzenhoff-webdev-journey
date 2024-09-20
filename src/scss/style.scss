@@ -6,7 +6,7 @@
 @import "myImage";
 $headerHeight: 10rem;
 $sidebarWidth: 20rem;
-$margin: 2rem;
+$margin: 1rem;
 
 $screen-mid: 768px;
 $screen-normal: 992px;
@@ -37,7 +37,7 @@ $screen-large: 1200px;
 }
 
 main {
-  width: 98%;
+  width: 100%;
   background-color: red;
   min-height: 100vh;
   font-size: 2rem;
@@ -107,6 +107,14 @@ main {
       }
     }
   }
+  .subtitle-text{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $margin;
+  }
   aside {
     background-color: yellow;
     color: black;
@@ -143,7 +151,7 @@ main {
   .content {
     background-color: $joBlue;
     border-radius: 10px;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -201,7 +209,9 @@ main {
           background-color: rgb(128, 0, 109);
           display: flex;
           min-height: 9rem;
+          min-width: 10rem;
           justify-content: center;
+
         }
       }
     }
