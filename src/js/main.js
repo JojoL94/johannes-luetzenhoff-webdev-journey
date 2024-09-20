@@ -1,5 +1,5 @@
 import "./../scss/style.scss";
-import { animateMagneticSmiley } from "./magneticSmiley";
+import { animateMagneticSmiley } from "./magneticIcons";
 
 animateMagneticSmiley();
 

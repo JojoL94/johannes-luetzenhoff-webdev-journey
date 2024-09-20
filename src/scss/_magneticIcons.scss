@@ -1,9 +1,9 @@
-$size: 10rem;
+$size: 5rem;
 .magnetic-container{
     border: none;
-    background-color: transparent;
+    background-color: red;
     position: relative;
-    padding: $size * 0.8;
+    padding: $size * 0.2;
     margin: 0;
     display: flex;
     align-items: center;
@@ -11,19 +11,18 @@ $size: 10rem;
     cursor: pointer;
     .magnetic-element{
         z-index: 2;
-        width: $size * 0.3;
-        height: $size * 0.3;
+        width: $size * 0.9;
+        height: $size * 0.9;
         pointer-events: none;
         img{
             height: 100%;
             vertical-align: bottom;
-            transform: rotate(-90deg)
         }
     }
     .magnetic-background{
         background-color: $joYellow;
-        width: $size * 0.6;
-        height: $size * 0.6;
+        width: $size* 1.5;
+        height: $size * 1.5;
         position: absolute;
         z-index: 1;
         border-radius: $size * 0.2;
