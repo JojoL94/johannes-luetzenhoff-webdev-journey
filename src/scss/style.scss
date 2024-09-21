@@ -1,9 +1,9 @@
 @import "preset";
 @import "magneticIcons";
-@import "typed";
 @import "normalize";
 @import "utilAnimation";
 @import "myImage";
+@import "timeline";
 $headerHeight: 10rem;
 $sidebarWidth: 20rem;
 $margin: 1rem;
@@ -62,58 +62,14 @@ main {
   @include large {
     padding: $headerHeight 0 0 $sidebarWidth;
   }
-
-  .typewriter {
-    display: grid;
-    //height: 100vh;
-    place-items: center;
-    width: 100%;
-  }
-
-  .input-wrapper {
-    display: block;
-    font-family: monospace;
-    font-size: 125%;
-    width: 50%;
-    > input,
-    > .placeholder {
-      display: block;
-      appearance: none;
-      width: 100%;
-      height: 100%;
-      background-color: transparent;
-      border: none;
-    }
-    > .placeholder {
-      pointer-events: none;
-      @include typed(
-        "Hi, Johannes hier",
-        "Die Seite wurde am 19.09.2024 erstellt",
-        "Der Rest wird in den nächsten Tagen fertig gemacht",
-        "PS: Der Smiley hier reagiert auf deinen Mauszeiger",
-        1.5,
-        (
-          caret-width: 2px,
-          caret-space: 2px,
-        )
-      );
-    }
-    > input {
-      &:focus,
-      &:active {
-        + .placeholder {
-          display: none;
-        }
-      }
-    }
-  }
   .subtitle-text{
     width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: $margin;
+    //padding: $margin;
+
   }
   aside {
     background-color: yellow;
@@ -208,13 +164,32 @@ main {
         .block-element {
           background-color: rgb(128, 0, 109);
           display: flex;
-          min-height: 9rem;
-          min-width: 10rem;
-          justify-content: center;
+          //min-height: 9rem;
+          //min-width: 10rem;
+          //justify-content: center;
 
         }
       }
     }
+  }
+
+  .expandable-text{
+    width: 300px;
+    height: 20px;
+    color: #fff; /* fallback */
+    background: -webkit-linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
+    background: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s 0s height ease, 1s 1s opacity ease;
+  }
+  .expandable-text:hover{
+    width: auto;
+    height: auto;
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    transition: 1s 1s height ease, 1s 0s opacity ease;
   }
 
   header {
