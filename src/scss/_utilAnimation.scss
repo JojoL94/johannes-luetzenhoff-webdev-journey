@@ -2,14 +2,7 @@
 $slideInStartingPoint : 60px;
 
 /* Utility classes */
-.fade-in-image {
-  animation: fadeIn 5s;
-  -webkit-animation: fadeIn 5s;
-  -moz-animation: fadeIn 5s;
-  -o-animation: fadeIn 5s;
-  -ms-animation: fadeIn 5s;
-}
-.fade-in-text {
+.fade-in {
   font-family: $roboto;
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;

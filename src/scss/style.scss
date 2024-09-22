@@ -4,10 +4,11 @@
 @import "utilAnimation";
 @import "myImage";
 @import "timeline";
+@import "elemFadeIn";
 
-$headerHeight: 10rem;
-$sidebarWidth: 20rem;
-$margin: 1rem;
+$headerHeight: 5rem;
+$sidebarWidth: 10rem;
+$margin: 1.3rem;
 
 $screen-mid: 768px;
 $screen-normal: 992px;
@@ -100,7 +101,7 @@ main {
   .content {
     background-color: $joBlue;
     border-radius: 10px;
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
