@@ -7,7 +7,7 @@
 @import "elemFadeIn";
 @import "videoEmbed";
 
-$headerHeight: 5rem;
+$headerHeight: 8rem;
 $sidebarWidth: 13rem;
 $margin: 1rem;
 
@@ -186,12 +186,12 @@ main {
 
     .blocks {
       padding: $margin;
-      //width: 100%;
+      width: 100%;
       display: grid;
       grid-gap: $margin;
       border-radius: 25px;
-      align-items: center;
-      justify-content: center;
+
+
 
       @include small {
         grid-template-columns: auto;
@@ -254,12 +254,14 @@ main {
         }
         .block-element-header{
           background-color: rgb(59, 61, 90);
-          padding-left: 50%;
-          padding-right: 100%;
-          padding-top: 20%;
+          margin: 0;
+          padding-top: 5%;
+          padding-left: 20%;
           border-top-left-radius: 50%;
           width: 100%;
-
+          h1{
+            width: 20vh;
+          }
         }
       }
     }
