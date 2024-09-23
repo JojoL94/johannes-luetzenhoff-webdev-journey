@@ -3,7 +3,7 @@ function checkElementLocation() {
     var $window = $(window);
     var bottom_of_window = $window.scrollTop() + $window.height();
   
-    $('.block-element').each(function(i) {
+    $('.content').each(function(i) {
       var $that = $(this);
       var bottom_of_object = $that.position().top + $that.outerHeight();
   
