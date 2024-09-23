@@ -5,9 +5,10 @@
 @import "myImage";
 @import "timeline";
 @import "elemFadeIn";
+@import "videoEmbed";
 
 $headerHeight: 5rem;
-$sidebarWidth: 10rem;
+$sidebarWidth: 10.5rem;
 $margin: 1.3rem;
 
 $screen-mid: 768px;
@@ -40,7 +41,7 @@ $screen-large: 1200px;
 
 main {
   width: 100%;
-  background-color: red;
+  background-color: white;
   min-height: 100vh;
   font-size: 2rem;
   color: white;
@@ -71,7 +72,7 @@ main {
 
     @include small {
       width: 100%;
-      min-height: 15rem;
+      height: auto;
     }
 
     @include mid {
@@ -96,27 +97,102 @@ main {
       left: 0;
       bottom: 0;
     }
+    .sidebar-content {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      border-radius: 20px;
+      background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+
+      @include small {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      @include mid {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      @include normal {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      @include large {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+    }
+    .sidebar-content a:hover:not(.active) {
+      background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+      color: white;
+    }
+
+    .sidebar-content a {
+      display: block;
+      color: black;
+      padding: 16px;
+
+      text-decoration: none;
+      @include small {
+        text-align: center;
+        float: none;
+      }
+
+      @include mid {
+        text-align: center;
+        float: none;
+      }
+
+      @include normal {
+        float: left;
+      }
+      div.content {
+        margin-left: 0;
+      }
+
+      @include large {
+        float: left;
+      }
+      div.content {
+        margin-left: 0;
+      }
+    }
+
+    .sidebar-content a.active {
+      background-color: #04aa6d;
+      color: white;
+    }
   }
 
   .content {
     background-color: $joBlue;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    min-height: 25vh;
+    //min-height: 25vh;
     padding: $margin;
     border: 2px solid $joOrange;
 
     .blocks {
       padding: $margin;
-      width: 100%;
+      //width: 100%;
       display: grid;
       grid-gap: $margin;
-      align-items: center;
-      justify-content: center;
+      border-radius: 25px;
+      //align-items: center;
+      //justify-content: center;
 
       @include small {
         grid-template-columns: auto;
@@ -127,18 +203,20 @@ main {
       }
 
       @include normal {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
       }
 
       @include large {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto auto auto;
       }
       .block {
         background-color: green;
         padding: 0;
-        width: 100%;
+        //width: 100%;
+        justify-content: center;
         display: grid;
         grid-gap: $margin;
+        border-radius: 5px;
 
         @include small {
           grid-template-columns: auto;
@@ -149,21 +227,22 @@ main {
         }
 
         @include normal {
-          grid-template-columns: auto auto;
+          grid-template-columns: auto auto auto auto;
         }
 
         @include large {
-          grid-template-columns: auto auto auto;
+          grid-template-columns: auto auto auto auto auto auto auto auto;
         }
         .block-element {
           background-color: rgb(128, 0, 109);
-          display: flex;
+          //display: flex;
           padding: 1rem;
-          position: relative;
+          //position: relative;
+          width: 100%;
           //min-height: 9rem;
           //min-width: 10rem;
           //justify-content: center;
-          .subtitle-text{
+          .subtitle-text {
             margin: 0;
             display: flex;
             flex-direction: column;
@@ -172,7 +251,7 @@ main {
             //padding: $margin;
           }
         }
-        .block-element h3{
+        .block-element h3 {
           position: absolute;
           top: 0;
           transform: translate(0, -50%);
@@ -184,18 +263,26 @@ main {
     }
   }
 
-  .expandable-text{
+  .expandable-text {
     //width: 300px;
     height: 20px;
     color: #fff; /* fallback */
-    background: -webkit-linear-gradient(0deg, rgba(255,255,255,1), rgba(255,255,255,0));
-    background: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,0));
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 1s 0s height ease, 1s 1s opacity ease;
   }
-  .expandable-text:hover{
+  .expandable-text:hover {
     width: auto;
     height: auto;
     color: #fff;
