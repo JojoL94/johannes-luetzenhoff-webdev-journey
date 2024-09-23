@@ -8,8 +8,8 @@
 @import "videoEmbed";
 
 $headerHeight: 5rem;
-$sidebarWidth: 10.5rem;
-$margin: 1.3rem;
+$sidebarWidth: 13rem;
+$margin: 1rem;
 
 $screen-mid: 768px;
 $screen-normal: 992px;
@@ -227,11 +227,11 @@ main {
         }
 
         @include normal {
-          grid-template-columns: auto auto auto auto;
+          grid-template-columns: auto auto auto auto auto;
         }
 
         @include large {
-          grid-template-columns: auto auto auto auto auto auto auto auto;
+          grid-template-columns: auto auto auto auto auto;
         }
         .block-element {
           background-color: rgb(128, 0, 109);
