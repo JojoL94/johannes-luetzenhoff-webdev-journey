@@ -172,7 +172,6 @@ main {
       color: white;
     }
   }
-
   .content {
     background-color: $joBlue;
     border-radius: 10px;
@@ -253,6 +252,15 @@ main {
           padding: 1%;
           margin: 0%;
         }
+        .block-element-header{
+          background-color: rgb(59, 61, 90);
+          padding-left: 50%;
+          padding-right: 100%;
+          padding-top: 20%;
+          border-top-left-radius: 50%;
+          width: 100%;
+
+        }
       }
     }
   }
@@ -301,7 +309,7 @@ main {
 
   footer {
     width: 100%;
-    background-color: orange;
+    background-color: black;
     border-radius: 20px;
     min-height: 25rem;
     display: flex;
