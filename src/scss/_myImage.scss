@@ -3,7 +3,6 @@ $imgSizeFactor: 0.9;
 $imgBackgroundSizeFactor: 0.95;
 .myImage-container{
     border: none;
-    background-color: $joRed;
     position: relative;
     padding: $containerSize * 0.1;
     margin: 0;
@@ -22,7 +21,8 @@ $imgBackgroundSizeFactor: 0.95;
         }
     }
     .myImage-background{
-        background-color: $joYellow;
+        background: rgb(255,103,103);
+    background: linear-gradient(103deg, rgba(255,103,103,1) 5%, rgba(255,238,103,1) 22%, rgba(171,255,103,1) 43%, rgba(103,224,149,1) 57%, rgba(103,255,216,1) 73%, rgba(103,183,255,1) 82%, rgba(255,103,233,1) 94%, rgba(255,103,193,1) 100%, rgba(255,103,103,1) 100%);
         width: $containerSize * $imgBackgroundSizeFactor;
         height: $containerSize * $imgBackgroundSizeFactor;
         position: absolute;
