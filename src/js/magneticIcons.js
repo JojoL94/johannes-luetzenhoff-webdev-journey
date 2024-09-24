@@ -1,6 +1,6 @@
 export function animateMagneticSmiley() {
   const buttons = document.querySelectorAll(".magnetic-container");
-  const time = "150";
+  const time = "250";
   buttons.forEach((elm) => {
     elm.addEventListener("mousemove", move);
     elm.addEventListener("mouseenter", start);

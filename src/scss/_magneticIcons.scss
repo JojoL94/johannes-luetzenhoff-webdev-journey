@@ -54,19 +54,19 @@ $size: 5rem;
         z-index: 2;
         text-transform: lowercase;
         @include small {
-            font-size: 1vw;
+            font-size: 1.7vw;
           }
     
           @include mid {
-            font-size: 0.6vw;
+            font-size: 1vw;
           }
     
           @include normal {
-            font-size: 0.6vw;;
+            font-size: 0.65vw;
           }
     
           @include large {
-            font-size: 0.6vw;;
+            //font-size: 0.6vw;
           }
 
     }
