@@ -11,34 +11,6 @@ $headerHeight: 8rem;
 $sidebarWidth: 13rem;
 $margin: 1rem;
 
-$screen-mid: 768px;
-$screen-normal: 992px;
-$screen-large: 1200px;
-
-@mixin small {
-  @media (max-width: #{$screen-mid}) {
-    @content;
-  }
-}
-
-@mixin mid {
-  @media (min-width: #{$screen-mid}) {
-    @content;
-  }
-}
-
-@mixin normal {
-  @media (min-width: #{$screen-normal}) {
-    @content;
-  }
-}
-
-@mixin large {
-  @media (min-width: #{$screen-large}) {
-    @content;
-  }
-}
-
 main {
   width: 100%;
   background-color: white;
@@ -198,7 +170,7 @@ main {
       }
 
       @include mid {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
       }
 
       @include normal {

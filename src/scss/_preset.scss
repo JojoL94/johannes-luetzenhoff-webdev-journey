@@ -16,6 +16,34 @@ $atmnOrange2: #F26938;
 $atmnBrown: #8C3623;
 $roboto: 'Roboto', sans-serif;
 
+$screen-mid: 768px;
+$screen-normal: 992px;
+$screen-large: 1200px;
+
+@mixin small {
+  @media (max-width: #{$screen-mid}) {
+    @content;
+  }
+}
+
+@mixin mid {
+  @media (min-width: #{$screen-mid}) {
+    @content;
+  }
+}
+
+@mixin normal {
+  @media (min-width: #{$screen-normal}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$screen-large}) {
+    @content;
+  }
+}
+
 @font-face {
 	font-family: $roboto;
 	src: url('./../assets/fonts/Roboto-Bold.ttf');
