@@ -13,11 +13,11 @@ $margin: 1rem;
 
 $main-bg-color: #FFD067;
 
-$sidebar-rgb: rgb(4,157,191);
-$sidebar-bg-moz: -moz-linear-gradient(180deg, rgba(4,157,191,1) 0%, rgba(242,235,240,1) 57%, rgba(242,235,240,1) 84%);
-$sidebar-bg-webkit: -webkit-linear-gradient(180deg, rgba(4,157,191,1) 0%, rgba(242,235,240,1) 57%, rgba(242,235,240,1) 84%);
-$sidebar-bg-linear: linear-gradient(180deg, rgba(4,157,191,1) 0%, rgba(242,235,240,1) 57%, rgba(242,235,240,1) 84%);
-$sidebar-bg-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#049dbf",endColorstr="#f2ebf0",GradientType=1);
+$sidebar-rgb: rgb(103,196,255);
+$sidebar-bg-moz: -moz-linear-gradient(103deg, rgba(103,196,255,1) 21%, rgba(103,128,255,1) 51%, rgba(103,142,255,1) 88%);
+$sidebar-bg-webkit: -webkit-linear-gradient(103deg, rgba(103,196,255,1) 21%, rgba(103,128,255,1) 51%, rgba(103,142,255,1) 88%);
+$sidebar-bg-linear: linear-gradient(103deg, rgba(103,196,255,1) 21%, rgba(103,128,255,1) 51%, rgba(103,142,255,1) 88%);
+$sidebar-bg-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#67c4ff",endColorstr="#678eff",GradientType=1);
 
 $sidebar-hover-rgb: -moz-linear-gradient(
   180deg,
@@ -53,11 +53,11 @@ $sidebar-hover-bg-linear: -moz-linear-gradient(
 );
 $sidebar-hover-bg-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#63a47c",endColorstr="#63a47c",GradientType=1);
 
-$content-transition-top-rgb: rgb(255,208,103);
-$content-transition-top-bg-moz: -moz-linear-gradient(0deg, rgba(255,208,103,1) 32%, rgba(255,208,103,1) 76%, rgba(255,130,103,1) 100%);
-$content-transition-top-bg-webkit: -moz-linear-gradient(0deg, rgba(255,208,103,1) 32%, rgba(255,208,103,1) 76%, rgba(255,130,103,1) 100%);
-$content-transition-top-bg-linear: linear-gradient(0deg, rgba(255,208,103,1) 32%, rgba(255,208,103,1) 76%, rgba(255,130,103,1) 100%);
-$content-transition-top-bg-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffd067",endColorstr="#ff8267",GradientType=1);
+$content-transition-top-rgb: rgb(255,103,193);
+$content-transition-top-bg-moz: -moz-linear-gradient(103deg, rgba(255,103,193,1) 21%, rgba(255,103,103,1) 51%, rgba(255,103,193,1) 88%);
+$content-transition-top-bg-webkit: -webkit-linear-gradient(103deg, rgba(255,103,193,1) 21%, rgba(255,103,103,1) 51%, rgba(255,103,193,1) 88%);
+$content-transition-top-bg-linear: linear-gradient(103deg, rgba(255,103,193,1) 21%, rgba(255,103,103,1) 51%, rgba(255,103,193,1) 88%);
+$content-transition-top-bg-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff67c1",endColorstr="#ff67c1",GradientType=1);
 
 $content-transition-bottom-rgb: rgb(255,208,103);
 $content-transition-bottom-bg-moz: -moz-linear-gradient(180deg, rgba(255,208,103,1) 32%, rgba(255,208,103,1) 76%, rgba(255,130,103,1) 100%);
@@ -74,7 +74,7 @@ main {
   background-color: $main-bg-color;
   min-height: 100vh;
   font-size: 2rem;
-  color: #1B748D;
+  color: #052128;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -100,16 +100,17 @@ main {
     color: white;
 
     @include small {
-      width: 100%;
+      width: 90%;
       height: auto;
     }
 
     @include mid {
-      width: 100%;
+      width: 90%;
       min-height: 15rem;
     }
 
     @include normal {
+      padding-top: 5rem;
       width: $sidebarWidth;
       height: 100%;
       position: fixed;
@@ -130,7 +131,7 @@ main {
       margin: 0;
       padding: 0;
       width: 100%;
-      border-radius: 20px;
+
       background: $sidebar-rgb;
       background: $sidebar-bg-moz;
       background: $sidebar-bg-webkit;
@@ -144,24 +145,30 @@ main {
         width: 100%;
         height: auto;
         position: relative;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       }
 
       @include mid {
         width: 100%;
         height: auto;
         position: relative;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
       }
 
       @include normal {
         width: 100%;
         height: auto;
         position: relative;
+        border-radius: 20px;
       }
 
       @include large {
         width: 100%;
         height: auto;
         position: relative;
+        border-radius: 20px;
       }
     }
     .sidebar-content a:hover:not(.active) {
@@ -210,14 +217,34 @@ main {
       color: white;
     }
   }
+  .bg-card{
+    background-color: #04aa6d;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: $margin;
+    margin-bottom: 10px;
+  }
+
+  .bg-card-header{
+    background-color: #21eaa0;
+    background-position: calc(100% - 20px) calc(100% - 10px); 
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+
   .content {
-    width: 98%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     min-height: 5vh;
-    padding: $margin;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    //background-color: #04aa6d;
+    //border-radius: 25px;
+
+
 
     .blocks {
       padding: $margin;
@@ -239,15 +266,103 @@ main {
       }
 
       @include large {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
+      }
+
+      .block-border-bottom{
+        border-bottom: 1mm solid;
+        @include small {
+          border-image: linear-gradient(to right, darkblue, rgb(153, 50, 204)) 1;
+        }
+  
+        @include mid {
+          border-image: linear-gradient(to right, darkblue, rgb(153, 50, 204)) 1;
+        }
+  
+        @include normal {
+          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0)) 1;
+        }
+  
+        @include large {
+          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0)) 1;
+        }
+      }
+
+      .block-border-top{
+        border-top: 1mm solid;
+        @include small {
+          border-image: linear-gradient(to right, darkblue, rgb(153, 50, 204)) 1;
+        }
+  
+        @include mid {
+          border-image: linear-gradient(to right, darkblue, rgb(153, 50, 204)) 1;
+        }
+  
+        @include normal {
+          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0.757)) 1;
+        }
+  
+        @include large {
+          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0.749)) 1;
+        }
+      }
+
+      .block-left{
+        @include small {
+          justify-content: center;
+          align-items: center;
+        }
+  
+        @include mid {
+          justify-content: center;
+          align-items: center;
+        }
+  
+        @include normal {
+          justify-content: center;
+          align-items: center;
+        }
+  
+        @include large {
+          justify-content: left;
+          align-items: left;
+        }
+      }
+      .block-center{
+        justify-content: center;
+        align-items: center;
+      }
+      .block-right{
+        @include small {
+          justify-content: center;
+          align-items: center;
+        }
+  
+        @include mid {
+          justify-content: center;
+          align-items: center;
+        }
+  
+        @include normal {
+          justify-content: center;
+          align-items: center;
+        }
+  
+        @include large {
+          justify-content: right;
+          align-items: right;
+        }
       }
 
       .block {
         padding: 0;
-        justify-content: center;
+        //padding-top: 1rem;
+        padding-bottom: 2rem;
         display: grid;
         grid-gap: $margin;
         border-radius: 5px;
+        //background: blue;
+        min-height: 8rem;
 
         @include small {
           grid-template-columns: auto;
@@ -258,11 +373,16 @@ main {
         }
 
         @include normal {
-          grid-template-columns: auto auto auto auto auto;
+          grid-template-columns: auto auto ;
         }
 
         @include large {
-          grid-template-columns: auto auto auto auto auto;
+          grid-template-columns: auto auto auto auto;
+        }
+        h2{
+          max-width:fit-content;
+          padding-left: 30px;
+
         }
         .block-element {
           padding: 1rem;
@@ -320,71 +440,6 @@ main {
     color: #fff;
     -webkit-text-fill-color: #fff;
     transition: 1s 1s height ease, 1s 0s opacity ease;
-  }
-
-  .content-transition-top {
-    background: $content-transition-top-rgb;
-    background: $content-transition-top-bg-moz;
-    background: $content-transition-top-bg-webkit;
-    background: $content-transition-top-bg-linear;
-    filter: $content-transition-top-bg-filter;
-    position: absolute;
-    left: $sidebarWidth + 1rem;
-    //z-index: -;
-    border-radius: 10px;
-    min-height: 25vh;
-    padding: $margin;
-    @include small {
-      left: 0;
-      width: 100%;
-    }
-
-    @include mid {
-      left: 0;
-      width: 99%;
-    }
-
-    @include normal {
-      left: $sidebarWidth + 1rem;
-      width: 85%;
-    }
-
-    @include large {
-      left: $sidebarWidth + 1rem;
-      width: 88%;
-    }
-  }
-
-  .content-transition-bottom {
-    background: $content-transition-bottom-rgb;
-    background: $content-transition-bottom-bg-moz;
-    background: $content-transition-bottom-bg-webkit;
-    background: $content-transition-bottom-bg-linear;
-    filter: $content-transition-bottom-bg-filter;
-    position: absolute;
-    left: $sidebarWidth + 1rem;
-    border-radius: 10px;
-    min-height: 1vh;
-    padding: 2rem;
-    @include small {
-      left: 0;
-      width: 100%;
-    }
-
-    @include mid {
-      left: 0;
-      width: 99%;
-    }
-
-    @include normal {
-      left: $sidebarWidth + 1rem;
-      width: 85%;
-    }
-
-    @include large {
-      left: $sidebarWidth + 1rem;
-      width: 88%;
-    }
   }
 
   header {
