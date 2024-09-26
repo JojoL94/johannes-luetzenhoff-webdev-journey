@@ -105,14 +105,14 @@ $breakpoint: 700px;
 }
 
 .timeline__item--year {
-    text-align: center;
+  text-align: center;
   max-width: 150px;
   margin: 0 48px 0 auto;
   //font-size: 2rem;
   background-color: $bgColor;
   line-height: 1;
   border-image: none;
-  padding: .5rem 1rem 1rem;
+  padding: .5rem 1rem 1rem 1rem;
   
   &:before {
     display: none;
