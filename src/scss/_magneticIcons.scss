@@ -37,7 +37,6 @@ $size: 5rem;
         margin: auto;
         img{
             height: 100%;
-            vertical-align: bottom;
         }
     }
     .magnetic-background{
@@ -52,7 +51,9 @@ $size: 5rem;
     }
     .magnetic-text{
         z-index: 2;
-        text-transform: lowercase;
+        padding-left: 2px;
+        padding-right: 2px;
+        text-transform:none;
         @include small {
             font-size: 1.7vw;
           }

@@ -225,6 +225,13 @@ main {
     margin-bottom: 10px;
   }
 
+  .bg-card-round{
+    background-color: #04aa6d;
+    border-radius: 25px;
+    padding: $margin;
+    margin-bottom: 10px;
+  }
+
   .bg-card-header{
     background-color: #21eaa0;
     background-position: calc(100% - 20px) calc(100% - 10px); 
@@ -284,7 +291,7 @@ main {
         }
   
         @include large {
-          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0)) 1;
+          border-image: linear-gradient(to right, darkblue, rgba(50, 204, 178, 0.121)) 1;
         }
       }
 
@@ -299,11 +306,11 @@ main {
         }
   
         @include normal {
-          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0.757)) 1;
+          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0)) 1;
         }
   
         @include large {
-          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0.749)) 1;
+          border-image: linear-gradient(to right, darkblue, rgba(153, 50, 204, 0)) 1;
         }
       }
 
@@ -356,8 +363,8 @@ main {
 
       .block {
         padding: 0;
-        //padding-top: 1rem;
-        padding-bottom: 2rem;
+        padding-top: 1rem;
+        //padding-bottom: 2rem;
         display: grid;
         grid-gap: $margin;
         border-radius: 5px;
@@ -411,6 +418,7 @@ main {
         }
         .block-element-header {
           margin: 0;
+          padding-left: 2rem;
           z-index: 1;
           h1 {
             width: 25vh;
