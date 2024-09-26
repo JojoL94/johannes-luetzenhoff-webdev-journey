@@ -48,6 +48,8 @@ $size: 5rem;
         border-radius: $size * 0.2;
         pointer-events: none;
         box-shadow: 0px $size * 0.3 $size 0 px rgba($ciGreen, $alpha: 0.85);
+        border-style: solid;
+        border-color: #593E25;
     }
     .magnetic-text{
         z-index: 2;

@@ -1,9 +1,9 @@
-$color: skyblue;
-$lineColor: hotpink;
-$fontColor: #bbb;
-$bgColor1: #222;
-$bgColor2: #444;
-$yearBgColor: #333;
+$color: #8C2020;
+$lineColor: #2e0a0a;
+$fontColor: #125773;
+$bgColor1: #A2EAF2;
+$bgColor2: #A2EAF2;
+$bgColor: #f0eeea;
 
 $breakpoint: 700px;
 
@@ -17,7 +17,7 @@ $breakpoint: 700px;
     content: '';
     position: absolute;
     height: 100%;
-    border: 1px solid $lineColor;
+    border: 2px solid $lineColor;
     right: 40px;
     top: 0;
   }
@@ -38,7 +38,6 @@ $breakpoint: 700px;
 }
 
 .timeline__item {
-  
   padding: 1rem;
   border: 2px solid $lineColor;
   border-image: linear-gradient(to right, $color 0%, $lineColor 100%);
@@ -46,6 +45,7 @@ $breakpoint: 700px;
   position: relative;
   margin: 1rem 3rem 1rem 1rem;
   clear: both;
+  background-color: $bgColor;
   
   &:after,
   &:before {
@@ -79,14 +79,37 @@ $breakpoint: 700px;
       }
     }
   }
+
+
+}
+.expandable-text {
+  //width: 300px;
+  height: 20px;
+  color: $fontColor; /* fallback */
+  background: linear-gradient(
+    90deg,
+    $fontColor,
+    rgba(255, 255, 255, 0)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 1s 0s height ease, 1s 1s opacity ease;
+}
+.expandable-text:hover {
+  width: auto;
+  height: auto;
+  color: $fontColor;
+  -webkit-text-fill-color: $fontColor;
+  transition: 1s 1s height ease, 1s 0s opacity ease;
 }
 
 .timeline__item--year {
     text-align: center;
   max-width: 150px;
   margin: 0 48px 0 auto;
-  font-size: 1.8rem;
-  background-color: $yearBgColor;
+  //font-size: 2rem;
+  background-color: $bgColor;
   line-height: 1;
   border-image: none;
   padding: .5rem 1rem 1rem;
@@ -114,11 +137,11 @@ $breakpoint: 700px;
 .timeline__title {
   margin: 0;
   font-family: 'Raleway', sans-serif;
-  font-size: 1.5em;
+  font-size: 3rem;
 }
 
 .timeline__blurb {
-  line-height: 1.5;
-  font-size: 2rem;
+  line-height: 1;
+  font-size: 2.2rem;
   margin: .5rem 0 0;
 }

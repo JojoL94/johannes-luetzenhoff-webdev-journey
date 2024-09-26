@@ -1,6 +1,6 @@
 $containerSize: 25rem;
 $imgSizeFactor: 0.9;
-$imgBackgroundSizeFactor: 0.95;
+$imgBackgroundSizeFactor: 0.93;
 .myImage-container{
     border: none;
     position: relative;
@@ -21,8 +21,11 @@ $imgBackgroundSizeFactor: 0.95;
         }
     }
     .myImage-background{
-        background: rgb(255,103,103);
-    background: linear-gradient(103deg, rgba(255,103,103,1) 5%, rgba(255,238,103,1) 22%, rgba(171,255,103,1) 43%, rgba(103,224,149,1) 57%, rgba(103,255,216,1) 73%, rgba(103,183,255,1) 82%, rgba(255,103,233,1) 94%, rgba(255,103,193,1) 100%, rgba(255,103,103,1) 100%);
+        background: rgb(48,34,21);
+        background: -moz-linear-gradient(59deg, rgba(48,34,21,1) 18%, rgba(214,172,121,1) 48%, rgba(82,82,82,1) 71%);
+        background: -webkit-linear-gradient(59deg, rgba(48,34,21,1) 18%, rgba(214,172,121,1) 48%, rgba(82,82,82,1) 71%);
+        background: linear-gradient(59deg, rgba(48,34,21,1) 18%, rgba(214,172,121,1) 48%, rgba(82,82,82,1) 71%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#302215",endColorstr="#525252",GradientType=1);
         width: $containerSize * $imgBackgroundSizeFactor;
         height: $containerSize * $imgBackgroundSizeFactor;
         position: absolute;
