@@ -11,11 +11,11 @@ $headerHeight: 4rem;
 $sidebarWidth: 14rem;
 $margin: 1rem;
 
-$main-bg-color: #F0B66B;
+$main-bg-color: #f8e2d0;
 
 $bg-sidebar: #56acbf;
 $bg-color-header: #56acbf;
-$bg-color-card:  #a2eaf2;
+$bg-color-card: #a2eaf2;
 $line-color: #125773;
 $header-bg-color: #102a30;
 $footer-bg-color: #125773;
@@ -25,7 +25,26 @@ $line-gradient-color-2: #f2ddb600;
 
 main {
   width: 100%;
-  background-color: $main-bg-color;
+  background: rgb(226, 142, 18);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(226, 142, 18, 1) 0%,
+    rgba(255, 176, 59, 1) 50%,
+    rgba(255, 240, 165, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(226, 142, 18, 1) 0%,
+    rgba(255, 176, 59, 1) 50%,
+    rgba(255, 240, 165, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(226, 142, 18, 1) 0%,
+    rgba(255, 176, 59, 1) 50%,
+    rgba(255, 240, 165, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e28e12",endColorstr="#fff0a5",GradientType=1);
   min-height: 100vh;
   font-size: 2rem;
   color: #052128;
@@ -234,7 +253,7 @@ main {
       grid-gap: $margin;
       border-radius: 25px;
       padding-bottom: 1rem;
-      
+
       @include small {
         grid-template-columns: auto;
       }
@@ -254,15 +273,21 @@ main {
       .block-border-bottom {
         border-bottom: 2px solid;
         @include small {
-          border-image: linear-gradient(to right, 
-          $line-gradient-color-1,
-          $line-gradient-color-2) 1;
+          border-image: linear-gradient(
+              to right,
+              $line-gradient-color-1,
+              $line-gradient-color-2
+            )
+            1;
         }
 
         @include mid {
-          border-image: linear-gradient(to right,  
-          $line-gradient-color-1,
-          $line-gradient-color-2) 1;
+          border-image: linear-gradient(
+              to right,
+              $line-gradient-color-1,
+              $line-gradient-color-2
+            )
+            1;
         }
 
         @include normal {
@@ -287,13 +312,20 @@ main {
       .block-border-top {
         border-top: 2px solid;
         @include small {
-          border-image: linear-gradient(to right, $line-gradient-color-1,
-          $line-gradient-color-2) 1;
+          border-image: linear-gradient(
+              to right,
+              $line-gradient-color-1,
+              $line-gradient-color-2
+            )
+            1;
         }
 
         @include mid {
-          border-image: linear-gradient(to $line-gradient-color-1,
-          $line-gradient-color-2) 1;
+          border-image: linear-gradient(
+              to $line-gradient-color-1,
+              $line-gradient-color-2
+            )
+            1;
         }
 
         @include normal {
@@ -352,8 +384,8 @@ main {
         }
 
         @include normal {
-          justify-content: center;
-          align-items: center;
+          justify-content: right;
+          align-items: right;
         }
 
         @include large {
@@ -442,18 +474,36 @@ main {
     align-items: center;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    h5{
-      font-style:normal;
+    h5 {
+      font-style: normal;
       color: white;
     }
   }
 
   footer {
     width: 100%;
-    background: rgb(255,255,255);
-    background: -moz-linear-gradient(348deg, rgba(255,255,255,0.1492204899777283) 0%, rgba(255,255,255,0.155902004454343) 35%, rgba(255,255,255,0) 57%, rgba(42,138,177,0) 87%);
-    background: -webkit-linear-gradient(348deg, rgba(255,255,255,0.1492204899777283) 0%, rgba(255,255,255,0.155902004454343) 35%, rgba(255,255,255,0) 57%, rgba(42,138,177,0) 87%);
-    background: linear-gradient(348deg, rgba(255,255,255,0.1492204899777283) 0%, rgba(255,255,255,0.155902004454343) 35%, rgba(255,255,255,0) 57%, rgba(42,138,177,0) 87%);
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(
+      348deg,
+      rgba(255, 255, 255, 0.1492204899777283) 0%,
+      rgba(255, 255, 255, 0.155902004454343) 35%,
+      rgba(255, 255, 255, 0) 57%,
+      rgba(42, 138, 177, 0) 87%
+    );
+    background: -webkit-linear-gradient(
+      348deg,
+      rgba(255, 255, 255, 0.1492204899777283) 0%,
+      rgba(255, 255, 255, 0.155902004454343) 35%,
+      rgba(255, 255, 255, 0) 57%,
+      rgba(42, 138, 177, 0) 87%
+    );
+    background: linear-gradient(
+      348deg,
+      rgba(255, 255, 255, 0.1492204899777283) 0%,
+      rgba(255, 255, 255, 0.155902004454343) 35%,
+      rgba(255, 255, 255, 0) 57%,
+      rgba(42, 138, 177, 0) 87%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#2a8ab1",GradientType=1);
     min-height: 25rem;
     display: flex;
