@@ -450,11 +450,11 @@ main {
 
   footer {
     width: 100%;
-    background: rgb(18,87,115);
-    background: -moz-linear-gradient(348deg, rgba(18,87,115,0.735632183908046) 0%, rgba(255,255,255,0) 53%, rgba(42,138,177,0) 65%);
-    background: -webkit-linear-gradient(348deg, rgba(18,87,115,0.735632183908046) 0%, rgba(255,255,255,0) 53%, rgba(42,138,177,0) 65%);
-    background: linear-gradient(348deg, rgba(18,87,115,0.735632183908046) 0%, rgba(255,255,255,0) 53%, rgba(42,138,177,0) 65%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#125773",endColorstr="#2a8ab1",GradientType=1);
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(348deg, rgba(255,255,255,0.1492204899777283) 0%, rgba(255,255,255,0.155902004454343) 35%, rgba(255,255,255,0) 57%, rgba(42,138,177,0) 87%);
+    background: -webkit-linear-gradient(348deg, rgba(255,255,255,0.1492204899777283) 0%, rgba(255,255,255,0.155902004454343) 35%, rgba(255,255,255,0) 57%, rgba(42,138,177,0) 87%);
+    background: linear-gradient(348deg, rgba(255,255,255,0.1492204899777283) 0%, rgba(255,255,255,0.155902004454343) 35%, rgba(255,255,255,0) 57%, rgba(42,138,177,0) 87%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#2a8ab1",GradientType=1);
     min-height: 25rem;
     display: flex;
     flex-direction: column;
