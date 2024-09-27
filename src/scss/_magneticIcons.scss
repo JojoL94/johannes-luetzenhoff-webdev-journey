@@ -23,11 +23,11 @@ $size: 5rem;
       }
 
       @include normal {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto auto auto;
       }
 
       @include large {
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto auto auto;
       }
     .magnetic-element{
         z-index: 2;
@@ -69,7 +69,7 @@ $size: 5rem;
           }
     
           @include large {
-            //font-size: 0.6vw;
+            font-size: 1rem;
           }
 
     }

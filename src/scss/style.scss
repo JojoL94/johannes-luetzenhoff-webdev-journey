@@ -11,7 +11,7 @@ $headerHeight: 4rem;
 $sidebarWidth: 14rem;
 $margin: 1rem;
 
-$main-bg-color: #0b3241;
+$main-bg-color: #F0B66B;
 
 $bg-sidebar: #56acbf;
 $bg-color-header: #56acbf;
@@ -20,8 +20,8 @@ $line-color: #125773;
 $header-bg-color: #102a30;
 $footer-bg-color: #125773;
 
-$line-gradient-color-1: #000000a7;
-$line-gradient-color-2: #f2ddb68e;
+$line-gradient-color-1: #00000075;
+$line-gradient-color-2: #f2ddb600;
 
 main {
   width: 100%;
@@ -210,6 +210,7 @@ main {
   }
 
   .bg-card-header {
+    margin-top: 2rem;
     background-color: $bg-color-header;
     background-position: calc(100% - 20px) calc(100% - 10px);
     border-top-left-radius: 25px;
@@ -218,6 +219,7 @@ main {
 
   .content {
     width: 90%;
+    max-width: 1500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
