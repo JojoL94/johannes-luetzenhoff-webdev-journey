@@ -1,0 +1,88 @@
+@import "preset";
+@import "mixins"; // Füge das Mixin hinzu
+
+aside {
+  color: white;
+
+  @include small {
+    @include sidebar-layout(90%, auto, relative);
+  }
+
+  @include mid {
+    @include sidebar-layout(90%, auto, relative);
+  }
+
+  @include normal {
+    @include sidebar-layout($sidebarWidth, 100%, fixed);
+    top: $headerHeight;
+    left: 0;
+    bottom: 0;
+  }
+
+  @include large {
+    @include sidebar-layout($sidebarWidth, 100%, fixed);
+    top: $headerHeight;
+    left: 0;
+    bottom: 0;
+  }
+
+  .sidebar-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: $bg-sidebar;
+    overflow: auto;
+
+    @include small {
+      @include sidebar-layout(100%, auto, relative, 20px 20px 0 0);
+    }
+
+    @include mid {
+      @include sidebar-layout(100%, auto, relative, 20px 20px 0 0);
+    }
+
+    @include normal {
+      @include sidebar-layout(100%, auto, relative, 20px);
+    }
+
+    @include large {
+      @include sidebar-layout(100%, auto, relative, 20px);
+    }
+  }
+
+  .sidebar-content a:hover:not(.active) {
+    @include gradient-hover(rgb(113, 220, 244), rgba(242, 92, 92, 0));
+    color: white;
+  }
+
+  .sidebar-content a {
+    display: block;
+    font-weight: bold;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+
+    @include small {
+      text-align: center;
+      float: none;
+    }
+
+    @include mid {
+      text-align: center;
+      float: none;
+    }
+
+    @include normal {
+      float: left;
+    }
+
+    @include large {
+      float: left;
+    }
+  }
+
+  .sidebar-content a.active {
+    @include gradient-hover(rgb(113, 220, 244), rgba(242, 92, 92, 0));
+    color: white;
+  }
+}

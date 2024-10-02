@@ -1,0 +1,24 @@
+// _cards.scss
+.bg-card {
+    background-color: $bg-color-card;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: $margin;
+    margin-bottom: 10px;
+  }
+  
+  .bg-card-round {
+    background-color: $bg-color-card;
+    border-radius: 25px;
+    padding: $margin;
+    margin-bottom: 10px;
+  }
+  
+  .bg-card-header {
+    margin-top: 2rem;
+    background-color: $bg-color-header;
+    background-position: calc(100% - 20px) calc(100% - 10px);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  

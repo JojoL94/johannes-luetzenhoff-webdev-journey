@@ -1,0 +1,20 @@
+@import "mixins";
+
+header {
+  width: 100%;
+  height: $headerHeight;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $header-bg-color;
+  z-index: 3;
+  
+  @include flex-center(column, center, center);
+  @include rounded-corners(7px);
+
+  h5 {
+    font-style: normal;
+    color: white;
+  }
+}

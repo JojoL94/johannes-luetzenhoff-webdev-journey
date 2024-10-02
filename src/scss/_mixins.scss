@@ -1,0 +1,137 @@
+// _mixins.scss
+@mixin responsive-grid(
+  $columns-small,
+  $columns-mid,
+  $columns-normal,
+  $columns-large
+) {
+  @include small {
+    grid-template-columns: $columns-small;
+  }
+
+  @include mid {
+    grid-template-columns: $columns-mid;
+  }
+
+  @include normal {
+    grid-template-columns: $columns-normal;
+  }
+
+  @include large {
+    grid-template-columns: $columns-large;
+  }
+}
+
+@mixin block-border-gradient($border-side) {
+  border-#{$border-side}: 2px solid;
+
+  @include small {
+    border-image: linear-gradient(
+        to right,
+        $line-gradient-color-1,
+        $line-gradient-color-2
+      )
+      1;
+  }
+
+  @include mid {
+    border-image: linear-gradient(
+        to right,
+        $line-gradient-color-1,
+        $line-gradient-color-2
+      )
+      1;
+  }
+
+  @include normal {
+    border-image: linear-gradient(
+        to right,
+        $line-gradient-color-1,
+        $line-gradient-color-2
+      )
+      1;
+  }
+
+  @include large {
+    border-image: linear-gradient(
+        to right,
+        $line-gradient-color-1,
+        $line-gradient-color-2
+      )
+      1;
+  }
+}
+
+@mixin block-alignment($small-align, $mid-align, $normal-align, $large-align) {
+  @include small {
+    justify-content: $small-align;
+    align-items: $small-align;
+  }
+
+  @include mid {
+    justify-content: $mid-align;
+    align-items: $mid-align;
+  }
+
+  @include normal {
+    justify-content: $normal-align;
+    align-items: $normal-align;
+  }
+
+  @include large {
+    justify-content: $large-align;
+    align-items: $large-align;
+  }
+}
+
+@mixin card-background($bg-color, $border-radius: 25px) {
+  background-color: $bg-color;
+  border-radius: $border-radius;
+  padding: $margin;
+  margin-bottom: 10px;
+}
+
+@mixin sidebar-layout($width, $height, $position: fixed, $border-radius: 0px) {
+  width: $width;
+  height: $height;
+  position: $position;
+  border-radius: $border-radius;
+}
+
+@mixin gradient-hover($start-color, $end-color, $direction: 90deg) {
+  background: $start-color;
+  background: -moz-linear-gradient($direction, $start-color 0%, $end-color 57%);
+  background: -webkit-linear-gradient(
+    $direction,
+    $start-color 0%,
+    $end-color 57%
+  );
+  background: linear-gradient($direction, $start-color 0%, $end-color 57%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$start-color, endColorstr=$end-color, GradientType=1);
+}
+
+@mixin footer-gradient(
+  $deg: 348deg,
+  $start-color: rgba(255, 255, 255, 0.149),
+  $end-color: rgba(42, 138, 177, 0)
+) {
+  background: linear-gradient(
+    $deg,
+    $start-color 0%,
+    rgba(255, 255, 255, 0.156) 35%,
+    rgba(255, 255, 255, 0) 57%,
+    $end-color 87%
+  );
+}
+
+@mixin flex-center($direction: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin rounded-corners($radius: 7px) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
